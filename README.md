@@ -54,6 +54,9 @@
 * Secure credentials using Kubernetes Secrets
 
 ---
+<img width="1920" height="1080" alt="Screenshot (113)" src="https://github.com/user-attachments/assets/28888fdd-c8cc-4fd4-bcb2-e88f24a4a8ec" />
+
+
 
 ## Project Structure
 
