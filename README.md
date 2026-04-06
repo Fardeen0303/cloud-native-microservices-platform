@@ -1,12 +1,12 @@
 # Cloud-Native Microservices Platform
 
-> Production-Ready Microservices Application deployed on Kubernetes with CI/CD, Autoscaling, Monitoring, and Secure Authentication
+> Production-Ready Full-Stack Microservices Application deployed on Kubernetes with CI/CD, Autoscaling, and Monitoring
 
 ![CI/CD](https://github.com/Fardeen0303/cloud-native-microservices-platform/actions/workflows/deploy.yml/badge.svg)
-![CI/CD](https://github.com/Fardeen0303/cloud-native-microservices-platform/actions/workflows/deploy.yml/badge.svg)
-![Docker Pulls](https://img.shields.io/docker/pulls/fardeen0303/user-service)
-![Docker Pulls](https://img.shields.io/docker/pulls/fardeen0303/product-service)
+![User Service Docker Pulls](https://img.shields.io/docker/pulls/fardeen0303/user-service)
+![Product Service Docker Pulls](https://img.shields.io/docker/pulls/fardeen0303/product-service)
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-Deployed-blue?logo=kubernetes)
+![React](https://img.shields.io/badge/Frontend-React-blue?logo=react)
 ![Flask](https://img.shields.io/badge/Backend-Flask-black?logo=flask)
 ![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue?logo=postgresql)
 ![Prometheus](https://img.shields.io/badge/Monitoring-Prometheus-orange?logo=prometheus)
@@ -17,142 +17,155 @@
 
 ---
 
-## Architecture Diagram
+## Architecture
 
-<img width="2560" height="765" alt="mermaid-diagram (1)" src="https://github.com/user-attachments/assets/a0f32b5d-2036-4f39-ab97-01ec3edc039a" />
+<img width="1536" height="1024" alt="ChatGPT Image Apr 6, 2026, 06_11_48 PM" src="https://github.com/user-attachments/assets/2b102d5c-62f5-4c3b-979b-f1dbb9f406aa" />
 
 
 ---
 
 ## Tech Stack
 
-| Layer              | Technology                              |
-| ------------------ | --------------------------------------- |
-| Backend            | Flask (Python)                          |
-| Database           | PostgreSQL                              |
-| Containerization   | Docker + Docker Hub                     |
-| Orchestration      | Kubernetes (K3s) on AWS EC2             |
-| Package Management | Helm                                    |
-| Ingress            | NGINX Ingress Controller                |
-| Autoscaling        | Horizontal Pod Autoscaler (HPA)         |
-| Monitoring         | Prometheus + Grafana                    |
-| CI/CD              | GitHub Actions                          |
-| Security           | JWT Authentication + Kubernetes Secrets |
+| Layer              | Technology                       |
+| ------------------ | -------------------------------- |
+| Frontend           | React + Tailwind CSS + Nginx     |
+| Backend            | Flask (Python)                   |
+| Database           | PostgreSQL                       |
+| Containerization   | Docker + Docker Hub              |
+| Orchestration      | Kubernetes (K3s) on AWS EC2      |
+| Package Management | Helm                             |
+| Ingress            | Nginx Ingress Controller         |
+| Autoscaling        | Horizontal Pod Autoscaler (HPA)  |
+| Monitoring         | Prometheus + Grafana             |
+| CI/CD              | GitHub Actions                   |
+| Security           | JWT Authentication + K8s Secrets |
 
 ---
 
 ## Features
 
-* Microservices architecture (User Service & Product Service)
-* REST API with JWT Authentication
-* PostgreSQL with Persistent Volume (PVC)
-* Kubernetes Deployment with Services & Ingress
-* Horizontal Pod Autoscaler (1–3 replicas)
-* CI/CD Pipeline with GitHub Actions
-* Monitoring with Prometheus & Grafana
-* Dockerized services with Docker Hub integration
-* Secure credentials using Kubernetes Secrets
+* Full-stack microservices architecture (React + Flask)
+* JWT Authentication (Register/Login)
+* Product CRUD Operations
+* React Frontend with Tailwind CSS
+* Persistent PostgreSQL Storage (PVC)
+* Auto-scaling based on CPU (1–3 replicas)
+* Automated CI/CD pipeline
+* Real-time monitoring dashboards (Prometheus + Grafana)
+* Dockerized services with Docker Hub
+* Kubernetes Secrets for secure credentials
 
 ---
-<img width="1920" height="1080" alt="Screenshot (113)" src="https://github.com/user-attachments/assets/28888fdd-c8cc-4fd4-bcb2-e88f24a4a8ec" />
-
-
 
 ## Project Structure
 
 ```
 cloud-native-microservices-platform/
-│
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── Products.jsx
+│   │   │   └── Dashboard.jsx
+│   │   └── App.jsx
+│   ├── nginx.conf
+│   └── Dockerfile
 ├── user-service/
 │   ├── app.py
 │   ├── requirements.txt
 │   └── Dockerfile
-│
 ├── product-service/
 │   ├── app.py
 │   ├── requirements.txt
 │   └── Dockerfile
-│
 ├── k8s/
 │   ├── postgres/
 │   │   ├── deployment.yaml
 │   │   ├── service.yaml
 │   │   ├── pvc.yaml
 │   │   └── secret.yaml
-│   │
 │   ├── user-service/
 │   │   └── deployment.yaml
-│   │
 │   ├── product-service/
 │   │   └── deployment.yaml
-│   │
-│   ├── ingress/
-│   │   └── ingress.yaml
-│   │
-│   └── hpa.yaml
-│
-├── .github/workflows/
-│   └── deploy.yml
-│
-└── screenshots/
+│   ├── frontend/
+│   │   └── deployment.yaml
+│   └── ingress/
+│       └── ingress.yaml
+├── k8s/hpa.yaml
+└── .github/workflows/deploy.yml
 ```
+
+---
+
+## Screenshots
+
+### Live Application
+
+![Login Page](screenshots/login.png)
+![Products Page](screenshots/products.png)
+![Dashboard Page](screenshots/dashboard.png)
+
+### Kubernetes
+
+![Pods Running](screenshots/pods.png)
+![HPA Autoscaling](screenshots/hpa.png)
+
+### CI/CD Pipeline
+
+![GitHub Actions](screenshots/cicd.png)
+
+### Monitoring
+
+![Prometheus](screenshots/prometheus.png)
+![Grafana Dashboard](screenshots/grafana.png)
+
+### Docker Hub
+
+![Docker Hub](screenshots/dockerhub.png)
 
 ---
 
 ## How to Deploy
 
-### 1. Install K3s
+### Prerequisites
 
 ```bash
+# Install K3s
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="--disable=traefik --disable=metrics-server" sh -
-```
 
-### 2. Install Helm
-
-```bash
+# Install Helm
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 ```
 
-### 3. Clone Repository
+### Deploy Application
 
 ```bash
+# Clone repo
 git clone https://github.com/Fardeen0303/cloud-native-microservices-platform.git
 cd cloud-native-microservices-platform
-```
 
-### 4. Deploy PostgreSQL
-
-```bash
+# Deploy PostgreSQL
 kubectl apply -f k8s/postgres/
-```
 
-Create Databases:
-
-```bash
+# Create databases
 kubectl exec -it $(kubectl get pod -l app=postgres -o jsonpath='{.items[0].metadata.name}') -- psql -U admin -d postgres -c "CREATE DATABASE users_db;"
 kubectl exec -it $(kubectl get pod -l app=postgres -o jsonpath='{.items[0].metadata.name}') -- psql -U admin -d postgres -c "CREATE DATABASE products_db;"
-```
 
-### 5. Deploy Microservices
-
-```bash
+# Deploy services
 kubectl apply -f k8s/user-service/
 kubectl apply -f k8s/product-service/
-```
+kubectl apply -f k8s/frontend/
 
-### 6. Deploy Ingress
-
-```bash
+# Deploy ingress
 kubectl apply -f k8s/ingress/
-```
 
-### 7. Deploy Autoscaler
-
-```bash
+# Deploy HPA
 kubectl apply -f k8s/hpa.yaml
 ```
 
-### 8. Install Monitoring
+### Install Monitoring
 
 **Prometheus**
 
@@ -186,7 +199,7 @@ helm install grafana grafana/grafana \
 | Method | Endpoint            | Description                     |
 | ------ | ------------------- | ------------------------------- |
 | POST   | /api/users/register | Register new user               |
-| POST   | /api/users/login    | Login and get JWT               |
+| POST   | /api/users/login    | Login and get JWT token         |
 | GET    | /api/users/profile  | Get user profile (JWT required) |
 
 ### Product Service
@@ -198,52 +211,6 @@ helm install grafana grafana/grafana \
 | POST   | /api/products     | Create product (JWT required) |
 | PUT    | /api/products/:id | Update product (JWT required) |
 | DELETE | /api/products/:id | Delete product (JWT required) |
-
----
-
-## Access Services
-
-| Service     | URL                          |
-| ----------- | ---------------------------- |
-| User API    | http://<EC2-IP>/api/users    |
-| Product API | http://<EC2-IP>/api/products |
-| Prometheus  | http://<EC2-IP>:30090        |
-| Grafana     | http://<EC2-IP>:30030        |
-
-Grafana Login:
-
-```
-Username: admin
-Password: admin123
-```
-
----
-
-## CI/CD Pipeline
-
-The GitHub Actions pipeline automatically:
-
-1. Builds Docker images
-2. Pushes images to Docker Hub
-3. Deploys to Kubernetes cluster
-4. Updates running pods
-
-Pipeline file:
-
-```
-.github/workflows/deploy.yml
-```
-
----
-
-## Future Improvements
-
-* Add API Gateway
-* Add Redis Caching
-* Add Service Mesh (Istio)
-* Add Distributed Tracing (Jaeger)
-* Add HTTPS with Cert-Manager
-* Add Terraform for Infrastructure as Code
 
 ---
 
