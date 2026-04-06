@@ -3,6 +3,17 @@
 > Production-Ready Microservices Application deployed on Kubernetes with CI/CD, Autoscaling, Monitoring, and Secure Authentication
 
 ![CI/CD](https://github.com/Fardeen0303/cloud-native-microservices-platform/actions/workflows/deploy.yml/badge.svg)
+![CI/CD](https://github.com/Fardeen0303/cloud-native-microservices-platform/actions/workflows/deploy.yml/badge.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/fardeen0303/user-service)
+![Docker Pulls](https://img.shields.io/docker/pulls/fardeen0303/product-service)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Deployed-blue?logo=kubernetes)
+![Flask](https://img.shields.io/badge/Backend-Flask-black?logo=flask)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue?logo=postgresql)
+![Prometheus](https://img.shields.io/badge/Monitoring-Prometheus-orange?logo=prometheus)
+![Grafana](https://img.shields.io/badge/Monitoring-Grafana-F46800?logo=grafana)
+![Helm](https://img.shields.io/badge/Helm-Charts-0F1689?logo=helm)
+![AWS](https://img.shields.io/badge/AWS-EC2-orange?logo=amazon-aws)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
