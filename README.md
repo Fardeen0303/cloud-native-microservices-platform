@@ -102,28 +102,24 @@ cloud-native-microservices-platform/
 ## Screenshots
 
 ### Live Application
-
-![Login Page](screenshots/login.png)
-![Products Page](screenshots/products.png)
-![Dashboard Page](screenshots/dashboard.png)
+<img width="1920" height="1080" alt="Screenshot (116)" src="https://github.com/user-attachments/assets/f8414449-63c1-4f00-b89d-fbc0f52e100e" />
+<img width="1920" height="1080" alt="Screenshot (117)" src="https://github.com/user-attachments/assets/cf95fcb4-2efd-4dcc-8703-eb5aef5042c6" />
+<img width="1920" height="1080" alt="Screenshot (118)" src="https://github.com/user-attachments/assets/e482098e-238b-45b3-88dc-22560d105b05" />
+<img width="1920" height="1080" alt="Screenshot (119)" src="https://github.com/user-attachments/assets/826aafee-12c8-416d-b42f-1709d8417dfe" />
 
 ### Kubernetes
-
-![Pods Running](screenshots/pods.png)
-![HPA Autoscaling](screenshots/hpa.png)
-
-### CI/CD Pipeline
-
-![GitHub Actions](screenshots/cicd.png)
+<img width="1920" height="1080" alt="Screenshot (120)" src="https://github.com/user-attachments/assets/bfb94056-11ac-4ef5-956e-a036e534dc05" />
+<img width="1920" height="1080" alt="Screenshot (121)" src="https://github.com/user-attachments/assets/e3188066-22a3-4b95-a922-f4f8aa982f55" />
+<img width="1920" height="1080" alt="Screenshot (129)" src="https://github.com/user-attachments/assets/6af09dd1-9e21-4afe-842a-5714976aa3c9" />
+<img width="1920" height="1080" alt="Screenshot (122)" src="https://github.com/user-attachments/assets/44df231e-cd5c-467f-9349-a6e7986082fd" />
+<img width="1920" height="1080" alt="Screenshot (123)" src="https://github.com/user-attachments/assets/7e89f26f-bca4-41f0-8825-648b9eedf939" />
 
 ### Monitoring
+<img width="1920" height="1080" alt="Screenshot (124)" src="https://github.com/user-attachments/assets/72f64a9a-f3d8-4905-a923-9500a9e79177" />
+<img width="1920" height="1080" alt="Screenshot (126)" src="https://github.com/user-attachments/assets/9c8a15b8-60d7-4ca2-8967-96bcac254e93" />
+<img width="1920" height="1080" alt="Screenshot (127)" src="https://github.com/user-attachments/assets/88ebf107-4034-4b3e-9764-ca2aac9cb3f7" />
+<img width="1920" height="1080" alt="Screenshot (128)" src="https://github.com/user-attachments/assets/4b5c20aa-0b86-4363-8098-0ed117d1c68a" />
 
-![Prometheus](screenshots/prometheus.png)
-![Grafana Dashboard](screenshots/grafana.png)
-
-### Docker Hub
-
-![Docker Hub](screenshots/dockerhub.png)
 
 ---
 
